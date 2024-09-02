@@ -43,17 +43,18 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.thoughtbot:expandablerecyclerview:1.4'
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+//  implementation 'com.github.thoughtbot.expandable-recycler-view:expandablerecyclerview:v1.4'
 
   //android
-  compile 'com.android.support:appcompat-v7:23.4.0'
-  compile 'com.android.support:recyclerview-v7:23.4.0'
+  implementation 'com.android.support:appcompat-v7:23.4.0'
+  implementation 'com.android.support:recyclerview-v7:23.4.0'
+  implementation project(':expandablerecyclerview')
 
   //unit tests
-  testCompile 'junit:junit:4.12'
-  testCompile 'org.robolectric:robolectric:3.2.1'
-  testCompile 'org.mockito:mockito-core:1.10.5'
+  testImplementation 'junit:junit:4.12'
+  testImplementation 'org.robolectric:robolectric:3.2.1'
+  testImplementation 'org.mockito:mockito-core:1.10.5'
 }
 
 //apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
